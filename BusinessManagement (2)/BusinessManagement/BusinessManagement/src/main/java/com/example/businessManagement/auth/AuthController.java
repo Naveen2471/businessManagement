@@ -36,7 +36,7 @@ public class AuthController {
         // 3️⃣ Generate JWT token
         String accessToken = jwtProvider.generateToken(
                 user.getUsername(),
-                user.getRole()
+                String.valueOf(user.getRole())
         );
 
         // 4️⃣ Create refresh token (optional)
